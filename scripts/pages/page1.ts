@@ -1,19 +1,43 @@
 import Page1Design from 'generated/pages/page1';
-import PageTitleLayout from 'components/PageTitleLayout';
-import System from '@smartface/native/device/system';
-import Label from '@smartface/native/ui/label';
 import { Route, Router } from '@smartface/router';
-import { styleableComponentMixin } from '@smartface/styling-context';
-import { themeService } from 'theme';
-import { Screen } from '@smartface/native/device';
-
-class StyleableLabel extends styleableComponentMixin(Label) {}
+import Image from '@smartface/native/ui/image';
+const blocks = {
+  noDamage: [
+    Image.createFromFile('images://stone.png'),
+    Image.createFromFile('images://chiseled.png'),
+    Image.createFromFile('images://mossy.png'),
+    Image.createFromFile('images://polished.png'),
+    Image.createFromFile('images://andesite.png'),
+    Image.createFromFile('images://blackstone.png'),
+    Image.createFromFile('images://gilded_blackstone.png'),
+    Image.createFromFile('images://sandstone.png'),
+    Image.createFromFile('images://chiseled_sandstone.png'),
+    Image.createFromFile('images://chiseled_red_sandstone.png'),
+    Image.createFromFile('images://netherrack.png'),
+    Image.createFromFile('images://endstone.png'),
+    Image.createFromFile('images://obsidian.png'),
+    Image.createFromFile('images://glowstone.png'),
+    Image.createFromFile('images://coal.png'),
+    Image.createFromFile('images://copper.png'),
+    Image.createFromFile('images://iron_ore.png'),
+    Image.createFromFile('images://redstone_ore.png'),
+    Image.createFromFile('images://lapis_ore.png'),
+    Image.createFromFile('images://gold_ore.png'),
+    Image.createFromFile('images://diamond_ore.png'),
+    Image.createFromFile('images://emerald_ore.png'),
+    Image.createFromFile('images://redstone_block.png'),
+    Image.createFromFile('images://lapis_block.png'),
+    Image.createFromFile('images://gold_block.png'),
+    Image.createFromFile('images://diamond_block.png'),
+    Image.createFromFile('images://emerald_block.png'),
+    Image.createFromFile('images://netherite_block.png'),
+    Image.createFromFile('images://amethyst_block.png')
+  ]
+};
 
 export default class Page1 extends Page1Design {
-  private disposeables: (() => void)[] = [];
   constructor(private router?: Router, private route?: Route) {
     super({});
-    console.log('[page1] constructor');
   }
 
   /**
@@ -22,18 +46,6 @@ export default class Page1 extends Page1Design {
    */
   onShow() {
     super.onShow();
-    console.log('[page1] onShow');
-    const lbl = new StyleableLabel();
-    this.addChild(lbl, 'page1lbl1unique', 'sf-label');
-    lbl.text = "It's a runtime label added from code";
-    themeService.addGlobalComponent(this.headerBar.titleLayout, 'page1TitleLayout');
-    this.headerBar.titleLayout.width = Screen.width;
-    this.headerBar.titleLayout.applyLayout();
-    this.disposeables.push(
-      this.btnNext.on('press', () => {
-        this.router.push('page2', { message: 'Hello World!' });
-      })
-    );
   }
 
   /**
@@ -42,19 +54,7 @@ export default class Page1 extends Page1Design {
    */
   onLoad() {
     super.onLoad();
-    console.log('[page1] onLoad');
-    this.headerBar.leftItemEnabled = false;
-    this.headerBar.titleLayout = new PageTitleLayout();
-    if (System.OS === System.OSType.ANDROID) {
-      this.headerBar.title = '';
-    }
   }
 
-  onHide(): void {
-    this.dispose();
-  }
-
-  dispose(): void {
-    this.disposeables.forEach((item) => item());
-  }
+  onHide(): void {}
 }
