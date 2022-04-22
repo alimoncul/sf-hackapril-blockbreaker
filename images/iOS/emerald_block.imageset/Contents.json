@@ -1,0 +1,23 @@
+{
+	"images": [
+		{
+			"filename": "emerald_block.png",
+			"scale": "1x",
+			"idiom": "universal"
+		},
+		{
+			"filename": "emerald_block@2x.png",
+			"scale": "2x",
+			"idiom": "universal"
+		},
+		{
+			"filename": "emerald_block@3x.png",
+			"scale": "3x",
+			"idiom": "universal"
+		}
+	],
+	"info": {
+		"version": 1,
+		"author": "smartface"
+	}
+}
