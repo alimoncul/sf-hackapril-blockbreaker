@@ -1,0 +1,9 @@
+{
+  ".flTitleLayout": {
+    "height": 50,
+    "&-lblTitle": {
+      "textAlignment": "MIDCENTER",
+      "textColor": "${mainColor}"
+    }
+  }
+}

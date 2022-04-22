@@ -1,60 +1,87 @@
 import Page1Design from 'generated/pages/page1';
 import { Route, Router } from '@smartface/router';
-import Image from '@smartface/native/ui/image';
-const blocks = {
-  noDamage: [
-    Image.createFromFile('images://stone.png'),
-    Image.createFromFile('images://chiseled.png'),
-    Image.createFromFile('images://mossy.png'),
-    Image.createFromFile('images://polished.png'),
-    Image.createFromFile('images://andesite.png'),
-    Image.createFromFile('images://blackstone.png'),
-    Image.createFromFile('images://gilded_blackstone.png'),
-    Image.createFromFile('images://sandstone.png'),
-    Image.createFromFile('images://chiseled_sandstone.png'),
-    Image.createFromFile('images://chiseled_red_sandstone.png'),
-    Image.createFromFile('images://netherrack.png'),
-    Image.createFromFile('images://endstone.png'),
-    Image.createFromFile('images://obsidian.png'),
-    Image.createFromFile('images://glowstone.png'),
-    Image.createFromFile('images://coal.png'),
-    Image.createFromFile('images://copper.png'),
-    Image.createFromFile('images://iron_ore.png'),
-    Image.createFromFile('images://redstone_ore.png'),
-    Image.createFromFile('images://lapis_ore.png'),
-    Image.createFromFile('images://gold_ore.png'),
-    Image.createFromFile('images://diamond_ore.png'),
-    Image.createFromFile('images://emerald_ore.png'),
-    Image.createFromFile('images://redstone_block.png'),
-    Image.createFromFile('images://lapis_block.png'),
-    Image.createFromFile('images://gold_block.png'),
-    Image.createFromFile('images://diamond_block.png'),
-    Image.createFromFile('images://emerald_block.png'),
-    Image.createFromFile('images://netherite_block.png'),
-    Image.createFromFile('images://amethyst_block.png')
-  ]
-};
+import Screen from '@smartface/native/device/screen';
+import { themeService } from 'theme';
+import { BLOCKS, MAX_RANK } from 'contants';
+import FlBlock from 'components/FlBlock';
+const { paddingLeft, paddingRight } = themeService.getStyle('#page1');
+const BLOCK_COUNT = BLOCKS.length;
 
 export default class Page1 extends Page1Design {
-  constructor(private router?: Router, private route?: Route) {
-    super({});
-  }
+    blocks = [
+        this.flBlock11,
+        this.flBlock12,
+        this.flBlock13,
+        this.flBlock21,
+        this.flBlock22,
+        this.flBlock23,
+        this.flBlock31,
+        this.flBlock32,
+        this.flBlock33
+    ];
+    initialized = false;
+    save = {
+        totalMoney: 0,
+        prestige: 0,
+        upgrades: {},
+        rank: 1
+    };
+    constructor(private router?: Router, private route?: Route) {
+        super({});
+    }
 
-  /**
-   * @event onShow
-   * This event is called when a page appears on the screen (everytime).
-   */
-  onShow() {
-    super.onShow();
-  }
+    setBlock(flBlock: FlBlock, rank: number) {
+        const maxBlockToShow = Math.ceil(rank / (MAX_RANK / BLOCK_COUNT));
+        const blockImages = BLOCKS.slice(0, maxBlockToShow);
+        const random = Math.max(0, Math.round(Math.random() * blockImages.length) - 1);
+        // console.log('setBlock |||| MaxBlockToShow: ', maxBlockToShow, ' BlockImagesRange: ', blockImages.length, ' Random: ', random);
+        flBlock.block = blockImages[random].image;
+        flBlock.price = blockImages[random].price;
+        flBlock.durability = blockImages[random].durability;
+        flBlock.onClick = (pop) => {
+            if (pop) {
+                this.save.totalMoney += blockImages[random].price;
+                this.setBlock(flBlock, this.save.rank);
+            }
+        };
+    }
 
-  /**
-   * @event onLoad
-   * This event is called once when page is created.
-   */
-  onLoad() {
-    super.onLoad();
-  }
+    initializeGame() {
+        this.blocks.forEach((b) => this.setBlock(b, this.save.rank));
+    }
 
-  onHide(): void {}
+    setWrapperHeight() {
+        const wrapperWidth = Screen.width - paddingLeft + paddingRight;
+        this.blockWrapper.height = wrapperWidth;
+        // this.blockWrapper.dispatch({ type: 'updateUserStyle', userStyle: { height: wrapperWidth } });
+        // [
+        //     this.flBlock11,
+        //     this.flBlock12,
+        //     this.flBlock13,
+        //     this.flBlock21,
+        //     this.flBlock22,
+        //     this.flBlock23,
+        //     this.flBlock31,
+        //     this.flBlock32,
+        //     this.flBlock33
+        // ].forEach((block) => {
+        //     block.dispatch({ type: 'updateUserStyle', userStyle: { height: wrapperWidth / 3, width: wrapperWidth / 3 } });
+        // });
+        // this.blockWrapper.applyLayout();
+    }
+
+    onShow() {
+        super.onShow();
+        if (!this.initialized) {
+            this.setWrapperHeight();
+            this.initializeGame();
+            this.initialized = true;
+        }
+    }
+
+    onLoad() {
+        super.onLoad();
+    }
+
+    onHide(): void { }
 }

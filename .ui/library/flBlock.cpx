@@ -1,0 +1,65 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flBlock .grow-relative",
+			"id": "6890-ccac-b4e4-8d2e",
+			"props": {
+				"children": [
+					"9fc2-2783-914b-5e04",
+					"72fc-de04-169e-7184"
+				],
+				"name": "flBlock",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"height": 100,
+				"left": 58.67,
+				"top": 276,
+				"width": 100
+			}
+		},
+		{
+			"className": ".sf-imageView .grow-relative .flBlock-imgBlock",
+			"id": "9fc2-2783-914b-5e04",
+			"oldName": "imageView1",
+			"props": {
+				"children": [],
+				"name": "imgBlock",
+				"parent": "6890-ccac-b4e4-8d2e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"image": "stone.png",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-imageView .grow-relative .flBlock-imgCrack",
+			"id": "72fc-de04-169e-7184",
+			"oldName": "imgBlock_1",
+			"props": {
+				"children": [],
+				"name": "imgCrack",
+				"parent": "6890-ccac-b4e4-8d2e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"image": "crack_low_1.png",
+				"usePageVariable": true
+			}
+		}
+	]
+}

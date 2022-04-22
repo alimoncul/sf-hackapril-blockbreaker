@@ -1,1 +1,31 @@
-{}
+{
+  ".default-font": {
+    "font": {
+      "size": 22,
+      "bold": true,
+      "italic": false,
+      "family": "FontAwesome5FreeRegular",
+      "style": null
+    }
+  },
+  ".grow-relative": {
+    "flexProps": {
+      "flexGrow": 1
+    },
+    "height": null,
+    "width": null
+  },
+  ".grow": {
+    "&-absolute": {
+      "height": null,
+      "width": null,
+      "flexProps": {
+        "positionType": "ABSOLUTE"
+      },
+      "right": 0,
+      "left": 0,
+      "top": 0,
+      "bottom": 0
+    }
+  }
+}

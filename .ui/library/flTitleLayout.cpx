@@ -1,0 +1,42 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flTitleLayout",
+			"id": "466e-7d48-5fd0-c8f1",
+			"props": {
+				"children": [
+					"1566-69aa-1a48-d766"
+				],
+				"name": "flTitleLayout",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"top": 200
+			}
+		},
+		{
+			"className": ".sf-label .default-font .flTitleLayout-lblTitle",
+			"id": "1566-69aa-1a48-d766",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lblTitle",
+				"parent": "466e-7d48-5fd0-c8f1",
+				"text": "$ 1000",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"text": "$ 1000",
+				"usePageVariable": true
+			}
+		}
+	]
+}
