@@ -8,7 +8,12 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"a08d-582c-6cbf-d66f"
+					"a08d-582c-6cbf-d66f",
+					"746a-eddc-d37d-55bf",
+					"5d3d-6fcc-e606-ec3e",
+					"3070-7264-9655-12fa",
+					"1d16-dcf5-1f51-4024",
+					"dc85-bd58-f1ab-df19"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -333,6 +338,102 @@
 				"id": "6890-ccac-b4e4-8d2e"
 			},
 			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flTitleLayout",
+			"hiddenComponent": false,
+			"id": "746a-eddc-d37d-55bf",
+			"props": {
+				"children": [],
+				"name": "flTitleLayout",
+				"parent": "e891b86d",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flTitleLayout",
+				"id": "466e-7d48-5fd0-c8f1"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button .btnCustom .default-font",
+			"hiddenComponent": false,
+			"id": "5d3d-6fcc-e606-ec3e",
+			"oldName": "btnMiner",
+			"props": {
+				"children": [],
+				"name": "btnFortune",
+				"parent": "e891b86d",
+				"text": "Buy upgrades",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "btnCustom",
+				"id": "a21f-15cd-256f-daad"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Buy upgrades",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button .btnCustom .default-font",
+			"hiddenComponent": false,
+			"id": "3070-7264-9655-12fa",
+			"oldName": "btnUpgrades_1",
+			"props": {
+				"children": [],
+				"name": "btnUpgradeMine",
+				"parent": "e891b86d",
+				"text": "Buy upgrades",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "btnCustom",
+				"id": "a21f-15cd-256f-daad"
+			},
+			"type": "Button",
+			"userProps": {
+				"text": "Buy upgrades",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .default-font.main #page1-lblRank",
+			"id": "1d16-dcf5-1f51-4024",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lblRank",
+				"parent": "e891b86d",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .default-font.main #page1-lblRank",
+			"id": "dc85-bd58-f1ab-df19",
+			"oldName": "lblPickaxe",
+			"props": {
+				"children": [],
+				"name": "lblFortune",
+				"parent": "e891b86d",
+				"usePageVariable": true
+			},
+			"type": "Label",
 			"userProps": {
 				"usePageVariable": true
 			}

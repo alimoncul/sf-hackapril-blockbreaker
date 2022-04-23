@@ -3,10 +3,6 @@ import File from '@smartface/native/io/file';
 import Path from '@smartface/native/io/path';
 import Image from '@smartface/native/ui/image';
 
-const SOUND_POP1 = new Sound();
-const SOUND_POP1_FILE = new File({ path: Path.AssetsUriScheme + 'pop1.mp3' });
-SOUND_POP1.loadFile(SOUND_POP1_FILE);
-
 const SOUND_POP2 = new Sound();
 const SOUND_POP2_FILE = new File({ path: Path.AssetsUriScheme + 'pop2.mp3' });
 SOUND_POP2.loadFile(SOUND_POP2_FILE);
@@ -15,11 +11,19 @@ export const SOUND_BUY = new Sound();
 const SOUND_BUY_FILE = new File({ path: Path.AssetsUriScheme + 'buy.mp3' });
 SOUND_BUY.loadFile(SOUND_BUY_FILE);
 
-export const SOUND_HIT = new Sound();
-const SOUND_HIT_FILE = new File({ path: Path.AssetsUriScheme + 'hit.mp3' });
-SOUND_HIT.loadFile(SOUND_HIT_FILE);
+export const SOUND_HITS = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map(() => {
+    const SOUND_HIT = new Sound();
+    const SOUND_HIT_FILE = new File({ path: Path.AssetsUriScheme + 'hit.mp3' });
+    SOUND_HIT.loadFile(SOUND_HIT_FILE);
+    return SOUND_HIT;
+});
 
-export const SOUND_POPS = [SOUND_POP1, SOUND_POP2];
+export const SOUND_POPS = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((a, index) => {
+    const SOUND_POP = new Sound();
+    const SOUND_POP_FILE = new File({ path: Path.AssetsUriScheme + `pop${index % 2 === 0 ? 1 : 2}.mp3` });
+    SOUND_POP.loadFile(SOUND_POP_FILE);
+    return SOUND_POP;
+});
 
 export const BLOCKS = [
     { durability: 9, image: Image.createFromFile('images://stone.png'), price: 1 },
@@ -53,7 +57,7 @@ export const BLOCKS = [
     { durability: 15, image: Image.createFromFile('images://amethyst_block.png'), price: 25000 }
 ];
 
-export const MAX_RANK = 500;
+export const MAX_RANK = 100;
 
 export const CRACK_IMAGES = {
     LOW: [
@@ -67,3 +71,5 @@ export const CRACK_IMAGES = {
         Image.createFromFile('images://crack_high_3.png')
     ]
 };
+
+export const RANKS = new Array(100).fill(0);

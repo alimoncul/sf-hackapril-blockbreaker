@@ -1,8 +1,0 @@
-{
-  ".btnBuy": {
-    "backgroundColor": "${mainColor}",
-    "borderColor": "rgba( 0, 0, 0, 1 )",
-    "borderWidth": 1,
-    "borderRadius": 16
-  } 
-}

@@ -1,0 +1,120 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flHelp",
+			"id": "102b-8836-1fca-7faf",
+			"props": {
+				"children": [
+					"0dc5-c24e-26f0-63dd",
+					"5f07-080c-2767-523b",
+					"0b36-172d-31b0-6557",
+					"9e1c-07dd-1f3e-6b09"
+				],
+				"name": "flHelp",
+				"parent": "57f4-201f-4bfc-5fc6",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flHelp-flHelpTitle",
+			"id": "0dc5-c24e-26f0-63dd",
+			"oldName": "flexLayout1",
+			"props": {
+				"children": [
+					"0c35-9e48-5fab-7b2b",
+					"1b5a-6f33-c275-ef2d"
+				],
+				"name": "flHelpTitle",
+				"parent": "102b-8836-1fca-7faf"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label .default-font.white .flHelp-flHelpTitle-lblHowToPlay",
+			"id": "0c35-9e48-5fab-7b2b",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lblHowToPlay",
+				"parent": "0dc5-c24e-26f0-63dd",
+				"text": "How to play"
+			},
+			"type": "Label",
+			"userProps": {
+				"text": "How to play"
+			}
+		},
+		{
+			"className": ".sf-label .default-font.white .flHelp-flHelpTitle-lblClose",
+			"id": "1b5a-6f33-c275-ef2d",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lblClose",
+				"parent": "0dc5-c24e-26f0-63dd",
+				"text": "X",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"text": "X",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .separator .flHelp-separator",
+			"id": "5f07-080c-2767-523b",
+			"oldName": "flexLayout1",
+			"props": {
+				"children": [],
+				"name": "separator",
+				"parent": "102b-8836-1fca-7faf"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-textView .grow-relative .default-font.white.small .flHelp-tvHelp",
+			"id": "0b36-172d-31b0-6557",
+			"oldName": "textView1",
+			"props": {
+				"children": [],
+				"name": "tvHelp",
+				"parent": "102b-8836-1fca-7faf",
+				"usePageVariable": true
+			},
+			"type": "TextView",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .default-font.white .flHelp-lblResetProgress",
+			"id": "9e1c-07dd-1f3e-6b09",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lblResetProgress",
+				"parent": "102b-8836-1fca-7faf",
+				"text": "Reset Progress",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"text": "Reset Progress",
+				"usePageVariable": true
+			}
+		}
+	]
+}

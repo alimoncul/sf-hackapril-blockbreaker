@@ -1,0 +1,49 @@
+{
+  ".flHelp": {
+    "top": 60,
+    "left": 15,
+    "right": 15,
+    "bottom": 60,
+    "flexProps": {
+      "positionType": "ABSOLUTE"
+    },
+    "height": null,
+    "backgroundColor": "${mainColor}",
+    "&-flHelpTitle": {
+      "height": 50,
+      "&-lblClose": {
+        "width": 30,
+        "textAlignment": "MIDCENTER",
+        "flexProps": {
+          "positionType": "ABSOLUTE"
+        },
+        "right": 10
+      },
+      "&-lblHowToPlay": {
+        "flexProps": {
+          "flexGrow": 1
+        },
+        "textAlignment": "MIDCENTER"
+      },
+      "flexProps": {
+        "flexDirection": "ROW"
+      }
+    },
+    "paddingLeft": 15,
+    "paddingRight": 15,
+    "paddingBottom": 15,
+    "paddingTop": 15,
+    "visible": true,
+    "&-separator": {
+      "marginBottom": 10
+    },
+    "&-tvHelp": {
+      "textAlignment": "TOPLEFT",
+      "backgroundColor": "${mainColor}",
+      "maxLines": 0
+    },
+    "&-lblResetProgress": {
+      "textAlignment": "MIDCENTER"
+    }
+  }
+}

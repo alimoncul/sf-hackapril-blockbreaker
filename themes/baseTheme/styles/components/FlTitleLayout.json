@@ -4,6 +4,25 @@
     "&-lblTitle": {
       "textAlignment": "MIDCENTER",
       "textColor": "${mainColor}"
+    },
+    "&-flInfo": {
+      "flexProps": {
+        "positionType": "ABSOLUTE"
+      },
+      "right": 0,
+      "width": 50,
+      "height": 50,
+      "top": 0,
+      "bottom": 0,
+      "borderRadius": 6,
+      "backgroundColor": "${mainColor}",
+      "&-lblQuestion": {
+        "textAlignment": "MIDCENTER",
+        "font": {
+          "size": 36
+        },
+        "textColor": "rgba( 255, 255, 255, 1 )"
+      }
     }
   }
 }

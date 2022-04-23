@@ -1,11 +1,11 @@
 {
 	"components": [
 		{
-			"className": ".sf-button .btnBuy .default-font",
+			"className": ".sf-button .btnCustom .default-font",
 			"id": "a21f-15cd-256f-daad",
 			"props": {
 				"children": [],
-				"name": "btnBuy",
+				"name": "btnCustom",
 				"parent": "57f4-201f-4bfc-5fc6",
 				"text": "Buy upgrades"
 			},
@@ -14,16 +14,8 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"font": {
-					"size": 22,
-					"bold": false,
-					"italic": false,
-					"family": "FontAwesome5FreeRegular",
-					"style": null
-				},
 				"text": "Buy upgrades",
-				"textColor": "rgba( 0, 0, 0, 1 )",
-				"top": 100
+				"top": 400
 			}
 		}
 	]

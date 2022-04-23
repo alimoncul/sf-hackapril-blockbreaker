@@ -2,10 +2,12 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flTitleLayout",
+			"hiddenComponent": false,
 			"id": "466e-7d48-5fd0-c8f1",
 			"props": {
 				"children": [
-					"1566-69aa-1a48-d766"
+					"1566-69aa-1a48-d766",
+					"756d-4509-0264-5028"
 				],
 				"name": "flTitleLayout",
 				"parent": "57f4-201f-4bfc-5fc6"
@@ -15,7 +17,9 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"top": 200
+				"flexProps": {},
+				"left": 63,
+				"top": 600.5
 			}
 		},
 		{
@@ -36,6 +40,44 @@
 			"userProps": {
 				"text": "$ 1000",
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flTitleLayout-flInfo",
+			"id": "756d-4509-0264-5028",
+			"oldName": "flexLayout1",
+			"props": {
+				"children": [
+					"a20a-645d-f608-db16"
+				],
+				"name": "flInfo",
+				"parent": "466e-7d48-5fd0-c8f1",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .default-font .flTitleLayout-flInfo-lblQuestion .grow-relative",
+			"id": "a20a-645d-f608-db16",
+			"oldName": "label1",
+			"props": {
+				"children": [],
+				"name": "lblQuestion",
+				"parent": "756d-4509-0264-5028",
+				"text": "?"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"text": "?"
 			}
 		}
 	]

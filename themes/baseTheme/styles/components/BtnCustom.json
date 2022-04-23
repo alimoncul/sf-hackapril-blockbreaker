@@ -1,0 +1,8 @@
+{
+  ".btnCustom": {
+    "backgroundColor": "${mainColor}",
+    "borderRadius": 6,
+    "marginTop": 10,
+    "marginBottom": 10
+  }
+}
